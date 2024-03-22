@@ -15,10 +15,10 @@
         parser.href = window.Location.href;
         var query = parser.search.substring(1);
 
-        var iosURL = "com.mycompany.app://?" + query;
+        var iosURL = "pt.unimoney://?" + query;
         iosLink.href = iosURL;
 
-        var androidUrl = "intent://?" + query + "#Intent;scheme=com.mycompany. app;package=com.mycompany.app;S.browser_fallback_url=?" + query + " ;end";
+        var androidUrl = "intent://?" + query + "#Intent;scheme=pt.unimoney;package=pt.unimoney;S.browser_fallback_url=?" + query + " ;end";
         androidLink.href = androidUrl;
 
         var os = getMobileOperatingSystem();
@@ -26,8 +26,8 @@
           window.location.href = iosURL;
           return;
         }
-          window.location.href = androidUrl;
-        }
+        window.location.href = androidUrl;
+      }
     </script>
   </head>
   <body onLoad=writeLink()>
